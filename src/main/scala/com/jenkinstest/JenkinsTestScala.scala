@@ -75,15 +75,16 @@ object JenkinsTestScala {
     val etlConfigCollName = "reno_etl_config"
     println("10")
     val etlConfigConnectionURI = "mongodb://"+mongoIP+"/"+etlConfigDBName
-    
+    println("11")
     
     //Get Config Details
     val etlConfigDf = sqlContext.read.format("com.mongodb.spark.sql.DefaultSource")
                     .option("spark.mongodb.input.uri", etlConfigConnectionURI)
                     .option("spark.mongodb.input.collection", etlConfigCollName)
                     .load()
-                    
+    println("12")               
     val testingprint = etlConfigDf.select("ods_db_name").head().getString(0)
+    println("13")
     println("test String is " + testingprint)
   }
 }
