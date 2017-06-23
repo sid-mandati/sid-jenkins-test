@@ -86,5 +86,7 @@ object JenkinsTestScala {
     val testingprint = etlConfigDf.select("ods_db_name").head().getString(0)
     println("13")
     println("test String is " + testingprint)
+    
+    sc.stop()
   }
 }
