@@ -55,7 +55,7 @@ object JenkinsTestScala {
    
     
     val sparkConf = new SparkConf().setAppName("Reno_ETL")
-    //.setMaster("local[4]")
+    .setMaster("local[4]")
     
     val sc = new SparkContext(sparkConf)
     
