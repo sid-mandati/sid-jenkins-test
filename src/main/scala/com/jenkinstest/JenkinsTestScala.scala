@@ -76,7 +76,7 @@ object JenkinsTestScala {
     println("10")
     val etlConfigConnectionURI = "mongodb://"+mongoIP+"/"+etlConfigDBName
     println("11")
-    
+    println(mongoClient.databaseNames())
     //Get Config Details
     val etlConfigDf = sqlContext.read.format("com.mongodb.spark.sql.DefaultSource")
                     .option("spark.mongodb.input.uri", etlConfigConnectionURI)
