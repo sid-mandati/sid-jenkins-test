@@ -1,50 +1,21 @@
 package com.jenkinstest
 
 
-import org.apache.spark.streaming._
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.streaming.{Seconds, StreamingContext}
+
 import org.apache.spark.{SparkConf,SparkContext}
 
-import play.api.libs.json._
-import play.api.libs.functional._
 import org.apache.spark.sql.{SQLContext,Row,Column,DataFrame}
-import java.util.HashMap
 
-import scala.collection.mutable.ArrayBuffer
-import org.apache.spark.sql.functions.{unix_timestamp, to_date}
-import org.apache.spark.sql.types._
-import org.apache.spark.sql.catalyst.expressions.GenericRowWithSchema
-import org.apache.spark.sql.functions._
-
-import java.util.Calendar
-import java.text.SimpleDateFormat 
-
-import org.json4s._
-import org.json4s.JsonDSL._
-import org.json4s.jackson.JsonMethods._
-import org.json4s.DefaultFormats
-
-import com.mongodb.spark._
-import com.mongodb.spark.sql._
-import com.mongodb.spark.config._
 
 import org.joda.time._
 import org.joda.time.format._
 
 import com.mongodb.casbah._
 
-import com.mongodb.casbah.MongoClient
-import com.mongodb.casbah.commons.MongoDBObject
-import com.mongodb.casbah.commons.MongoDBList
-import com.mongodb.casbah.query.Imports._
-
 import com.mongodb.DBObject
 import com.mongodb.casbah.MongoClientURI
 import com.mongodb.util.JSON
 
-import com.mongodb.casbah.commons.conversions.scala._ 
-import scala.collection.immutable
 
 
 object JenkinsTestScala {
