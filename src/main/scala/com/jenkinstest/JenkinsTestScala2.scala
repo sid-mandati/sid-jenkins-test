@@ -20,7 +20,7 @@ import com.mongodb.util.JSON
 
 object JenkinsTestScala2 {
   def main(args: Array[String]){
-    println("Im here")
+    println(args(0))
 
   }
 }
